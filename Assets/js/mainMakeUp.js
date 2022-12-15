@@ -13,7 +13,7 @@ const addElement = ({
   grandParentElement = undefined,
 }) => {
   const element = document.createElement(createdElement);
- 
+
   if (content) {
     element.innerHTML = content;
   }
@@ -110,11 +110,11 @@ const addEvents = () => {
   }
 };
 const checkStorage = () => {
-  for (let i = 0; i < formElements.length; i++) {
-    if (formElements[i].type !== "submit") {
-      formElements[i].value = sessionStorage.getItem(formElements[i].name);
+  formElements.forEach((element) => {
+    if (formElements.type !== "submit") {
+      formElements.value = sessionStorage.getItem(formElements.name);
     }
-  }
+  });
   addEvents();
 };
 checkStorage();

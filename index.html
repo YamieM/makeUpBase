@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Assets/css/mainMakeUp.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+    <title>MakeUp Base</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Base of makeUp</h1>
+      <form action="" name="filterForm" class="filter-form">
+        <label>Filter</label>
+        <input
+          name="filterForm_productBrand"
+          type=""
+          class="filterForm_input-brand"
+          placeholder="Input brand" 
+          onchange="getBrand(this.value)"         
+        />
+        <select
+          name="filterForm_productType"
+          class="filter-form_tags-list"
+          title="Product type"   
+          onchange="getType(this.value)"        
+        >
+          <option value="Product type" selected disabled>Product type</option>
+          <option value="Blush">Blush</option>
+          <option value="Bronzer">Bronzer</option>
+          <option value="Eyebrow">Eyebrow</option>
+          <option value="Eyeliner">Eyeliner</option>
+          <option value="Eyeshadow">Eyeshadow</option>
+          <option value="Foundation">Foundation</option>
+          <option value="Lip liner">Lip liner</option>
+          <option value="Lipstick">Lipstick</option>
+          <option value="Mascara">Mascara</option>
+          <option value="Nail polish">Nail polish</option>
+        </select>
+        <input
+          type="submit"
+          name="submitBtn"
+          value="Search"          
+        />
+      </form>
+      <div class="preloader">
+        <div class="loader"></div>
+      </div>
+    </div>
+    <script src="./Assets/js/mainMakeUp.js"></script>
+  </body>
+</html>

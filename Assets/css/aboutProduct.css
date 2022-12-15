@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+.main-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-family: "Gruppo", cursive;
+}
+
+.div-product {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: justify;
+  width: 70vw;
+}
+.div-product::before {
+  content: "";
+  background-color: rgba(97, 70, 70, 0.288);
+  height: 2px;
+  width: 70vw;
+}
+.div-product::after {
+  content: "";
+  background-color: rgba(97, 70, 70, 0.288);
+  height: 2px;
+  width: 70vw;
+}
+
+.product-name {
+  letter-spacing: 5px;
+  font-size: 40px;
+  color: rgb(87, 62, 57);
+}
+
+.product-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 5%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  margin-top: 10px;
+}
+
+.info-about-product {
+  margin: 10px 0px 5px 5px;
+}
+
+.buy-now-button {
+  height: 30px;
+  width: 80px;
+  background-color: rgb(180, 128, 124);
+  text-align: center;
+  color: aliceblue;
+  border: none;
+  margin: 10px 0px 0px 5px;
+  transition: 0.5s;
+}
+.buy-now-button:hover {
+  transform: scale(1.1);
+  background-color: rgb(197, 114, 128);
+  cursor: pointer;
+}
+
+.colors-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70vw;
+  margin-top: 20px;
+}
+.colors-section::after {
+  content: "";
+  background-color: rgba(97, 70, 70, 0.288);
+  height: 2px;
+  width: 70vw;
+}
+.colors-section::before {
+  content: "";
+  background-color: rgba(97, 70, 70, 0.288);
+  height: 2px;
+  width: 70vw;
+}
+
+.color-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.single-color-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: auto;
+  margin: 5px 10px 5px 0px;
+}
+
+.back-button {
+  font-size: 20px;
+  color: rgb(180, 128, 124);
+  margin-top: 5px;
+}
+.back-button:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=aboutProduct.css.map */

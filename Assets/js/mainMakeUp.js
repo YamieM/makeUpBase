@@ -13,7 +13,7 @@ const addElement = ({
   grandParentElement = undefined,
 }) => {
   const element = document.createElement(createdElement);
-
+ 
   if (content) {
     element.innerHTML = content;
   }
@@ -103,23 +103,20 @@ function setsForSS(name, value) {
 }
 
 const addEvents = () => {
-  [...formElements].forEach((element) => {
-    if (element.type !== "submit") {
-      element.addEventListener("change", () => {
-        setsForSS(element.name, element.value);
-      });
-    }
-  });
+  for (let i = 0; i < formElements.length; i++) {
+    formElements[i].addEventListener("change", () => {
+      setsForSS(formElements[i].name, formElements[i].value);
+    });
+  }
 };
 const checkStorage = () => {
-  [...formElements].forEach((element) => {
-    if (element.type !== "submit") {
-      element.value = sessionStorage.getItem(element.name);
+  for (let i = 0; i < formElements.length; i++) {
+    if (formElements[i].type !== "submit") {
+      formElements[i].value = sessionStorage.getItem(formElements[i].name);
     }
-  });
+  }
   addEvents();
 };
-
 checkStorage();
 
 let brandToFilter = filterForm.elements.filterForm_productBrand.value;
